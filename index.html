@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Chef Portfolio</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Home Section -->
+   <section id="home">
+      <h1>Welcome to My Culinary Journey</h1>
+      <img src="images/chef-photo.jpg" alt="Photo of Chef [Name]" />
+      <p>Hi! I’m [Name], a culinary student with a passion for flavors and learning. Welcome to my portfolio!</p>
+   </section>
+
+   <!-- About Section -->
+   <section id="about">
+      <h2>About Me</h2>
+      <p>I’m [Name], a student chef currently studying at [School Name]. My love for food began with [brief story or inspiration].</p>
+   </section>
+
+   <!-- Portfolio Section -->
+   <section id="portfolio">
+      <h2>My Culinary Creations</h2>
+      <div class="gallery">
+         <img src="images/dish1.jpg" alt="Dish 1 - Description" />
+         <img src="images/dish2.jpg" alt="Dish 2 - Description" />
+      </div>
+   </section>
+
+   <!-- Learning & Experience Section -->
+   <section id="learning">
+      <h2>Learning & Experience</h2>
+      <ul>
+         <li>Currently studying at [Culinary School]</li>
+         <li>Workshops: Knife skills, plating, flavor pairing</li>
+         <li>Internship at [Restaurant Name]</li>
+      </ul>
+   </section>
+
+   <!-- Contact Section -->
+   <section id="contact">
+      <h2>Contact Me</h2>
+      <form action="submit-form.php" method="POST">
+         <label for="name">Name:</label>
+         <input type="text" id="name" name="name" required>
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" required>
+         <label for="message">Message:</label>
+         <textarea id="message" name="message" rows="4" required></textarea>
+         <button type="submit">Send</button>
+      </form>
+   </section>
+</body>
+</html>
