@@ -1,146 +1,92 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
- }
- /* Left-Side Navigation Bar Styling */
-#side-navbar {
-   position: fixed;
-   top: 50%;
-   left: 0;
-   transform: translateY(-50%);
-   background-color: #333;
-   width: 150px;
-   height: auto;
+   font-family: Arial, sans-serif;
+   color: #333;
+   margin: 0;
+   padding: 0;
+   background-color: #92b877;
    display: flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: 0 5px 5px 0;
+}
+
+/* Left-Side Navigation Bar Styling */
+#side-navbar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #333;
+  width: 150px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
 }
 
 #side-navbar ul {
-   list-style-type: none;
-   padding: 0;
-   margin: 0;
-   text-align: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 #side-navbar ul li {
-   margin: 20px 0;
+  margin: 20px 0;
 }
 
 #side-navbar ul li a {
-   color: white;
-   text-decoration: none;
-   font-size: 1.1em;
-   display: block;
-   padding: 10px;
-   border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 #side-navbar ul li a:hover {
-   background-color: #ff6347; /* Highlight on hover */
-}
-/* Portfolio Section Styling */
-#portfolio {
-   margin-top: 20px;
-}
-
-#portfolio .gallery {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-   gap: 10px;
-}
-
-#portfolio .gallery img {
-   width: 100%;
-   border-radius: 5px;
-}
-/* Fade-in effect for content */
-#content {
-   opacity: 0;
-   animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-   to {
-      opacity: 1;
-   }
+  background-color: #ff6347; /* Highlight on hover */
 }
 
 /* Main Content Styling */
 #content {
-   margin-left: 160px; /* To leave space for the side navbar */
-   padding: 20px;
-   flex-grow: 1;
+  margin-left: 160px; /* To leave space for the side navbar */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Center content vertically */
 }
 
- 
- /* Section Styling */
- section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    text-align: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
- }
- 
- /* Heading Styles */
- h1 {
-    color: #444;
- }
- 
- h2 {
-    color: #555;
-    margin-top: 0;
- }
- 
- /* Gallery Styling */
- .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
- }
- 
- .gallery img {
-    width: 100%;
-    border-radius: 5px;
- }
- 
- /* Form Styling */
- form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
- }
- 
- form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
- }
- 
- form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
- }
- /* Navbar Styling */
-/* General Body Styling */
-body {
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-   display: flex;
+/* Centered Text Content and Right-Aligned Image */
+.text-content {
+  max-width: 600px;
+  text-align: center;
+  flex: 1; /* Take up remaining space on the left */
 }
+
+/* Portfolio Section Styling */
+#portfolio {
+   margin-top: 20px;
+ }
+ 
+ #portfolio .gallery {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 10px;
+ }
+ 
+.chef-image {
+  max-width: 300px; /* Adjust width as needed */
+  flex-shrink: 0; /* Prevents the image from resizing */
+  margin-left: 20px; /* Space between text and image */
+}
+
+.chef-image img {
+  width: 100%;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+
+
+#portfolio .gallery img {
 
