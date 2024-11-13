@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #92b877;
-  display: flex;
 }
 
 /* Left-Side Navigation Bar Styling */
@@ -52,15 +51,16 @@ body {
   padding: 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space text and image further apart */
+  justify-content: space-around; /* Distribute space between text and image */
   min-height: 100vh;
+  flex-wrap: wrap; /* Allow elements to stack on smaller screens */
 }
 
 /* Chef Image (Right-Aligned) */
 .chef-image {
   max-width: 300px;
   flex-shrink: 0;
-  margin-left: auto; /* Push image further to the right */
+  margin-left: 20px; /* Space between text and image */
 }
 
 .chef-image img {
@@ -73,12 +73,12 @@ body {
   max-width: 600px;
   text-align: left;
   line-height: 1.6;
-  margin-right: 500px; /* Add space between text and image */
 }
 
 /* Portfolio Section */
 #portfolio {
   margin-top: 20px;
+  width: 100%; /* Ensures portfolio takes full width */
 }
 
 #portfolio .gallery {
@@ -88,24 +88,30 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #content {
     flex-direction: column;
     align-items: center;
-    margin-left: 0;
+    margin-left: 160px;
     text-align: center;
   }
 
   .chef-image {
-    margin: 0 0 20px 0;
-    max-width: 100%;
+    margin: 20px 0 0 0;
+    max-width: 80%;
   }
 
   .text-content {
     max-width: 90%;
   }
+}
 
+@media (max-width: 768px) {
   #side-navbar {
     width: 100px;
+  }
+
+  #content {
+    margin-left: 0;
   }
 }
