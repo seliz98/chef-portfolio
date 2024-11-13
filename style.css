@@ -1,11 +1,11 @@
 /* General Styles */
 body {
-   font-family: Arial, sans-serif;
-   color: #333;
-   margin: 0;
-   padding: 0;
-   background-color: #92b877;
-   display: flex;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #92b877;
+  display: flex;
 }
 
 /* Left-Side Navigation Bar Styling */
@@ -16,7 +16,6 @@ body {
   transform: translateY(-50%);
   background-color: #333;
   width: 150px;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,45 +43,69 @@ body {
 }
 
 #side-navbar ul li a:hover {
-  background-color: #ff6347; /* Highlight on hover */
+  background-color: #ff6347;
 }
 
 /* Main Content Styling */
 #content {
-  margin-left: 160px; /* To leave space for the side navbar */
+  margin-left: 160px; /* Space for sidebar */
   padding: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Center content vertically */
+  justify-content: space-between; /* Space text and image further apart */
+  min-height: 100vh;
 }
 
-/* Centered Text Content and Right-Aligned Image */
-.text-content {
-  max-width: 600px;
-  text-align: center;
-  flex: 1; /* Take up remaining space on the left */
-}
-
-/* Portfolio Section Styling */
-#portfolio {
-   margin-top: 20px;
- }
- 
- #portfolio .gallery {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-   gap: 10px;
- }
-
+/* Chef Image (Right-Aligned) */
 .chef-image {
-  max-width: 300px; /* Adjust width as needed */
-  flex-shrink: 0; /* Prevents the image from resizing */
-  margin-left: 20px; /* Space between text and image */
+  max-width: 300px;
+  flex-shrink: 0;
+  margin-left: auto; /* Push image further to the right */
 }
 
 .chef-image img {
   width: 100%;
-  border-radius: 10px; /* Optional: Adds rounded corners */
+  border-radius: 10px;
 }
 
+/* Text Content (Left-Aligned) */
+.text-content {
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.6;
+  margin-right: 500px; /* Add space between text and image */
+}
+
+/* Portfolio Section */
+#portfolio {
+  margin-top: 20px;
+}
+
+#portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #content {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .chef-image {
+    margin: 0 0 20px 0;
+    max-width: 100%;
+  }
+
+  .text-content {
+    max-width: 90%;
+  }
+
+  #side-navbar {
+    width: 100px;
+  }
+}
