@@ -40,44 +40,46 @@
       </div>  
      </div>
      
-     <script>
-      // Create the lightbox overlay element
-      const lightboxOverlay = document.createElement("div");
-      lightboxOverlay.classList.add("lightbox-overlay");
-      document.body.appendChild(lightboxOverlay);
-   
-      // Add a close button inside the overlay
-      const closeButton = document.createElement("span");
-      closeButton.classList.add("lightbox-close");
-      closeButton.innerHTML = "&times;";
-      lightboxOverlay.appendChild(closeButton);
-   
-      // Event listener to close the lightbox
-      closeButton.addEventListener("click", () => {
-         lightboxOverlay.style.display = "none";
-         lightboxOverlay.innerHTML = ""; // Clear the image
-         lightboxOverlay.appendChild(closeButton); // Re-add the close button
-      });
-   
-      // Add click event to each gallery image to open it in lightbox
-      document.querySelectorAll(".lightbox-image").forEach(image => {
-         image.addEventListener("click", () => {
-            const lightboxImage = document.createElement("img");
-            lightboxImage.src = image.src; // Set the source of the clicked image
-            lightboxOverlay.innerHTML = ""; // Clear any previous content
-            lightboxOverlay.appendChild(lightboxImage); // Add new image
-            lightboxOverlay.appendChild(closeButton); // Re-add the close button
-            lightboxOverlay.style.display = "flex"; // Show the overlay
+      <!-- JavaScript for Lightbox -->
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         // Create the lightbox overlay element
+         const lightboxOverlay = document.createElement("div");
+         lightboxOverlay.classList.add("lightbox-overlay");
+         document.body.appendChild(lightboxOverlay);
+         lightboxOverlay.style.display = "none"; // Ensure it's hidden initially
+
+         // Add a close button inside the overlay
+         const closeButton = document.createElement("span");
+         closeButton.classList.add("lightbox-close");
+         closeButton.innerHTML = "&times;";
+         lightboxOverlay.appendChild(closeButton);
+
+         // Add click event to each gallery image to open it in lightbox
+         document.querySelectorAll(".lightbox-image").forEach(image => {
+            image.addEventListener("click", () => {
+               const lightboxImage = document.createElement("img");
+               lightboxImage.src = image.src; // Set the source of the clicked image
+               lightboxOverlay.innerHTML = ""; // Clear any previous content
+               lightboxOverlay.appendChild(lightboxImage); // Add new image
+               lightboxOverlay.appendChild(closeButton); // Re-add the close button
+               lightboxOverlay.style.display = "flex"; // Show the overlay
+            });
+         });
+
+         // Event listener to close the lightbox
+         closeButton.addEventListener("click", () => {
+            lightboxOverlay.style.display = "none"; // Hide the overlay
+         });
+
+         // Close lightbox when clicking outside the image
+         lightboxOverlay.addEventListener("click", (e) => {
+            if (e.target === lightboxOverlay) {
+               lightboxOverlay.style.display = "none"; // Hide the overlay
+            }
          });
       });
-   
-      // Close lightbox when clicking outside the image
-      lightboxOverlay.addEventListener("click", (e) => {
-         if (e.target === lightboxOverlay) {
-            lightboxOverlay.style.display = "none";
-         }
-      });
-   </script>     
+   </script>
      
  
 </body>

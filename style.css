@@ -160,85 +160,85 @@ body {
 }
 /* Contact Form Styling */
 .contact-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+   max-width: 600px;
+   margin: 20px auto;
+   padding: 20px;
+   background-color: #fff;
+   border-radius: 10px;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form .form-group {
-  margin-bottom: 15px;
+   margin-bottom: 15px;
 }
 
 .contact-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #444;
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: #444;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1em;
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   font-size: 1em;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #aaa;
+   color: #aaa;
 }
 
 .contact-form button.btn-submit {
-  width: 100%;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  font-size: 1em;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+   width: 100%;
+   padding: 10px;
+   background-color: #333;
+   color: #fff;
+   font-size: 1em;
+   font-weight: bold;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
 }
 
 .contact-form button.btn-submit:hover {
-  background-color: #ff6347; /* Add hover effect */
+   background-color: #ff6347; /* Add hover effect */
 }
 
 /* Social Media Section */
 .social-media {
-  margin-top: 30px;
-  text-align: center;
+   margin-top: 30px;
+   text-align: center;
 }
 
 .social-media h2 {
-  margin-bottom: 10px;
-  color: #444;
-  font-size: 1.5em;
+   margin-bottom: 10px;
+   color: #444;
+   font-size: 1.5em;
 }
 
 .social-media p {
-  margin-bottom: 15px;
-  color: #555;
-  font-size: 1em;
+   margin-bottom: 15px;
+   color: #555;
+   font-size: 1em;
 }
 
 .social-media a.social-link {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 10px 15px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+   display: inline-block;
+   margin: 0 10px;
+   padding: 10px 15px;
+   background-color: #333;
+   color: #fff;
+   text-decoration: none;
+   border-radius: 5px;
+   transition: background-color 0.3s ease;
 }
 
 .social-media a.social-link:hover {
-  background-color: #ff6347; /* Hover effect for links */
+   background-color: #ff6347; /* Hover effect for links */
 }
