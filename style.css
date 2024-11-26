@@ -87,6 +87,18 @@ body {
   gap: 10px;
 }
 
+#portfolio .gallery img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Rounded corners for gallery images */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a soft shadow for aesthetics */
+  transition: transform 0.2s ease-in-out; /* Add smooth hover effect */
+}
+
+#portfolio .gallery img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   #content {
@@ -115,6 +127,7 @@ body {
     margin-left: 0;
   }
 }
+
 /* Lightbox Overlay Styling */
 .lightbox-overlay {
   display: none;
@@ -132,8 +145,8 @@ body {
 
 /* Image inside the Lightbox */
 .lightbox-overlay img {
-  max-width: 80%;   /* Slightly smaller to ensure it fits comfortably */
-  max-height: 80%;  
+  max-width: 70%;   /* Slightly smaller to ensure it fits comfortably */
+  max-height: 70%;  
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
