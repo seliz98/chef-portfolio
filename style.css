@@ -115,3 +115,33 @@ body {
     margin-left: 0;
   }
 }
+/* Lightbox Overlay Styling */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Image inside the Lightbox */
+.lightbox-overlay img {
+  max-width: 80%;   /* Slightly smaller to ensure it fits comfortably */
+  max-height: 80%;  
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Additional media query for smaller screens */
+@media (max-width: 600px) {
+  .lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}

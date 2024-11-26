@@ -28,19 +28,56 @@
         <section id="portfolio">
            <h2>My Culinary Creations</h2>
            <div class="gallery">
-              <img src="images/dish1.jpg" alt="Dish 1 - A vibrant summer salad with heirloom tomatoes, fresh basil, and balsamic drizzle." />
-              <img src="images/dish2.jpg" alt="Dish 2 - Artfully plated seared scallops with a pea puree and microgreens." />
-              <img src="images/dish3.jpg" alt="Dish 3 - Decadent chocolate lava cake with a raspberry coulis." />
+              <img src="dish1.jpg" alt="Dish 1 - A vibrant summer salad with heirloom tomatoes, fresh basil, and balsamic drizzle." class="lightbox-image"/>
+              <img src="dish1.jpg" alt="Dish 2 - Artfully plated seared scallops with a pea puree and microgreens." class="lightbox-image"/>
+              <img src="dish1.jpg" alt="Dish 3 - Decadent chocolate lava cake with a raspberry coulis." class="lightbox-image"/>
            </div>
          </div>
         </section>
         <!-- Chef Image Container -->
         <div class="chef-image">
-         <img src="D:\chef-portfolio\about.jpeg" alt="Chef Diana" />
+         <img src="about.jpeg" alt="Chef Diana" />
       </div>  
      </div>
      
-     
+     <script>
+      // Create the lightbox overlay element
+      const lightboxOverlay = document.createElement("div");
+      lightboxOverlay.classList.add("lightbox-overlay");
+      document.body.appendChild(lightboxOverlay);
+   
+      // Add a close button inside the overlay
+      const closeButton = document.createElement("span");
+      closeButton.classList.add("lightbox-close");
+      closeButton.innerHTML = "&times;";
+      lightboxOverlay.appendChild(closeButton);
+   
+      // Event listener to close the lightbox
+      closeButton.addEventListener("click", () => {
+         lightboxOverlay.style.display = "none";
+         lightboxOverlay.innerHTML = ""; // Clear the image
+         lightboxOverlay.appendChild(closeButton); // Re-add the close button
+      });
+   
+      // Add click event to each gallery image to open it in lightbox
+      document.querySelectorAll(".lightbox-image").forEach(image => {
+         image.addEventListener("click", () => {
+            const lightboxImage = document.createElement("img");
+            lightboxImage.src = image.src; // Set the source of the clicked image
+            lightboxOverlay.innerHTML = ""; // Clear any previous content
+            lightboxOverlay.appendChild(lightboxImage); // Add new image
+            lightboxOverlay.appendChild(closeButton); // Re-add the close button
+            lightboxOverlay.style.display = "flex"; // Show the overlay
+         });
+      });
+   
+      // Close lightbox when clicking outside the image
+      lightboxOverlay.addEventListener("click", (e) => {
+         if (e.target === lightboxOverlay) {
+            lightboxOverlay.style.display = "none";
+         }
+      });
+   </script>     
      
  
 </body>
